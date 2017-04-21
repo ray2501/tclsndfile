@@ -1,0 +1,40 @@
+2017-01-07  Danilo Chang
+
+    * Bump version to 0.8
+    * Add new command set_string
+    * Bump version to 0.7
+    * Add new command get_string
+    * Add sndfile command more option check
+
+2016-12-29  Danilo Chang
+
+    * Bump version to 0.6
+    * Update tclsndfile.test
+    * sndfile command: Free memory before return error
+    * Bump version to 0.5
+    * Fix buffer size when read, use the specify buffersize
+
+2016-12-27  Danilo Chang
+
+    * Bump version to 0.4
+    * Add buffersize method
+
+2016-12-26  Danilo Chang
+
+    * Bump version to 0.3
+    * sndfile command: Get SF_INFO frames info
+
+2016-12-14  Danilo Chang
+
+    * Bump version to 0.2
+    * Add basic tests
+
+2016-12-10  Danilo Chang
+
+    * Add write_short, write_int, write_float and write_double function
+
+2016-12-09  Danilo Chang
+
+    * Add sndfile command
+    * Download sample extension
+
