@@ -122,6 +122,10 @@ Next step is to build tclsndfile.
 	$ make
 	$ make install
 
+Users also can use MSYS2 pacman to install libsndfile package.
+
+	$ pacman -S mingw-w64-x86_64-libsndfile
+
 Example
 =====
 
