@@ -1,5 +1,5 @@
 #
 # Tcl package index file
 #
-package ifneeded sndfile 0.9 \
-    [list load [file join $dir libsndfile0.9.so] sndfile]
+package ifneeded sndfile 1.0 \
+    [list load [file join $dir libsndfile1.0.so] sndfile]

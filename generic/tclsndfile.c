@@ -276,7 +276,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
 
     case SND_WRITE_SHORT: {
       Tcl_Obj *return_obj = NULL;
-      char *zData = NULL;
+      unsigned char *zData = NULL;
       int len;
       sf_count_t count;
 
@@ -287,7 +287,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
         return TCL_ERROR;
       }
 
-      zData = Tcl_GetStringFromObj(objv[2], &len);
+      zData = Tcl_GetByteArrayFromObj(objv[2], &len);
       if( !zData || len < 1 ){
           return TCL_ERROR;
       }
@@ -301,7 +301,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
 
     case SND_WRITE_INT: {
       Tcl_Obj *return_obj = NULL;
-      char *zData = NULL;
+      unsigned char *zData = NULL;
       int len;
       sf_count_t count;
 
@@ -312,7 +312,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
         return TCL_ERROR;
       }
 
-      zData = Tcl_GetStringFromObj(objv[2], &len);
+      zData = Tcl_GetByteArrayFromObj(objv[2], &len);
       if( !zData || len < 1 ){
           return TCL_ERROR;
       }
@@ -326,7 +326,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
 
     case SND_WRITE_FLOAT: {
       Tcl_Obj *return_obj = NULL;
-      char *zData = NULL;
+      unsigned char *zData = NULL;
       int len;
       sf_count_t count;
 
@@ -337,7 +337,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
         return TCL_ERROR;
       }
 
-      zData = Tcl_GetStringFromObj(objv[2], &len);
+      zData = Tcl_GetByteArrayFromObj(objv[2], &len);
       if( !zData || len < 1 ){
           return TCL_ERROR;
       }
@@ -351,7 +351,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
 
     case SND_WRITE_DOUBLE: {
       Tcl_Obj *return_obj = NULL;
-      char *zData = NULL;
+      unsigned char *zData = NULL;
       int len;
       sf_count_t count;
 
@@ -362,7 +362,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
         return TCL_ERROR;
       }
 
-      zData = Tcl_GetStringFromObj(objv[2], &len);
+      zData = Tcl_GetByteArrayFromObj(objv[2], &len);
       if( !zData || len < 1 ){
           return TCL_ERROR;
       }
