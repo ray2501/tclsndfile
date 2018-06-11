@@ -1,7 +1,7 @@
 /*
  * tclsndfile.c
  *
- *      Copyright (C) Danilo Chang 2016-2017
+ *      Copyright (C) Danilo Chang 2016-2018
  *
  ********************************************************************/
 
