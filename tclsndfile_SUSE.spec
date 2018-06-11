@@ -22,7 +22,7 @@ BuildRoot:     %{buildroot}
 Tcl bindings for libsndfile.
 
 %prep
-%setup -q -n %{name}-%{version}.tar.gz
+%setup -q -n %{name}-%{version}
 
 %build
 ./configure \
