@@ -8,7 +8,7 @@ Version:       0.8
 Release:       2
 License:       LGPL v2.1
 Group:         Development/Libraries/Tcl
-Source:        https://github.com/ray2501/tclsndfile/tclsndfile_0.8.zip
+Source:        %{name}-%{version}.tar.gz
 URL:           https://github.com/ray2501/tclsndfile
 BuildRequires: autoconf
 BuildRequires: make
@@ -22,7 +22,7 @@ BuildRoot:     %{buildroot}
 Tcl bindings for libsndfile.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}.tar.gz
 
 %build
 ./configure \
