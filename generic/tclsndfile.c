@@ -153,7 +153,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       if(read_count <= 0) {
          return TCL_ERROR;
       } else {
-         return_obj = Tcl_NewStringObj((char *) pSnd->short_block, read_count * sizeof(short));
+         return_obj = Tcl_NewByteArrayObj((unsigned char *) pSnd->short_block, read_count * sizeof(short));
          Tcl_SetObjResult(interp, return_obj);
       }
 
@@ -191,7 +191,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       if(read_count <= 0) {
          return TCL_ERROR;
       } else {
-         return_obj = Tcl_NewStringObj((char *) pSnd->int_block, read_count * sizeof(int));
+         return_obj = Tcl_NewByteArrayObj((unsigned char *) pSnd->int_block, read_count * sizeof(int));
          Tcl_SetObjResult(interp, return_obj);
       }
 
@@ -229,7 +229,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       if(read_count <= 0) {
          return TCL_ERROR;
       } else {
-         return_obj = Tcl_NewStringObj((char *) pSnd->float_block, read_count * sizeof(float));
+         return_obj = Tcl_NewByteArrayObj((unsigned char *) pSnd->float_block, read_count * sizeof(float));
          Tcl_SetObjResult(interp, return_obj);
       }
 
@@ -267,7 +267,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       if(read_count <= 0) {
          return TCL_ERROR;
       } else {
-         return_obj = Tcl_NewStringObj((char *) pSnd->double_block, read_count * sizeof(double));
+         return_obj = Tcl_NewByteArrayObj((unsigned char *) pSnd->double_block, read_count * sizeof(double));
          Tcl_SetObjResult(interp, return_obj);
       }
 
