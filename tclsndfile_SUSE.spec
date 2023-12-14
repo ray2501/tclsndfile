@@ -4,7 +4,7 @@
 
 Name:          tclsndfile
 Summary:       Tcl bindings for libsndfile
-Version:       1.0
+Version:       1.1
 Release:       0
 License:       LGPL-2.1-or-later
 Group:         Development/Libraries/Tcl
