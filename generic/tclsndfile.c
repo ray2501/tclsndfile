@@ -277,7 +277,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
     case SND_WRITE_SHORT: {
       Tcl_Obj *return_obj = NULL;
       unsigned char *zData = NULL;
-      int len;
+      Tcl_Size len;
       sf_count_t count;
 
       if( objc != 3 ){
@@ -302,7 +302,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
     case SND_WRITE_INT: {
       Tcl_Obj *return_obj = NULL;
       unsigned char *zData = NULL;
-      int len;
+      Tcl_Size len;
       sf_count_t count;
 
       if( objc != 3 ){
@@ -327,7 +327,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
     case SND_WRITE_FLOAT: {
       Tcl_Obj *return_obj = NULL;
       unsigned char *zData = NULL;
-      int len;
+      Tcl_Size len;
       sf_count_t count;
 
       if( objc != 3 ){
@@ -352,7 +352,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
     case SND_WRITE_DOUBLE: {
       Tcl_Obj *return_obj = NULL;
       unsigned char *zData = NULL;
-      int len;
+      Tcl_Size len;
       sf_count_t count;
 
       if( objc != 3 ){
@@ -379,7 +379,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       int location = 0;
       const char *pWhence = NULL;
       int whence = SEEK_CUR;
-      int len;
+      Tcl_Size len;
       sf_count_t count;
 
       if( objc != 4 ){
@@ -426,7 +426,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       const char *pType = NULL;
       const char *pResult = NULL;
       int str_type = 0;
-      int len = 0;
+      Tcl_Size len = 0;
 
       if( objc != 3 ){
         Tcl_WrongNumArgs(interp, 2, objv,
@@ -487,7 +487,7 @@ static int SndObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       const char *pType = NULL;
       const char *pString = NULL;
       int str_type = 0;
-      int len = 0;
+      Tcl_Size len = 0;
       int result = 0;
 
       if( objc != 4 ){
@@ -592,7 +592,7 @@ static int SndMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv){
   Tcl_DString translatedFilename;
   int buffersize = 0;
   Tcl_Obj *pResultStr = NULL;
-  int len;
+  Tcl_Size len;
 
   if( objc<4 || (objc&1)!=0 ){
     Tcl_WrongNumArgs(interp, 1, objv,
