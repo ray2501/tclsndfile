@@ -1037,7 +1037,7 @@ static int SndMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv){
 int
 Sndfile_Init(Tcl_Interp *interp)
 {
-    if (Tcl_InitStubs(interp, "8.4", 0) == NULL) {
+    if (Tcl_InitStubs(interp, TCL_VERSION, 0) == NULL) {
 	return TCL_ERROR;
     }
     if (Tcl_PkgProvide(interp, PACKAGE_NAME, PACKAGE_VERSION) != TCL_OK) {
